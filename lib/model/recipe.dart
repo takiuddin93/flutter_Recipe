@@ -1,7 +1,3 @@
-// To parse this JSON data, do
-//
-//     final recipe = recipeFromJson(jsonString);
-
 import 'dart:convert';
 
 Recipe recipeFromJson(String str) => Recipe.fromJson(json.decode(str));

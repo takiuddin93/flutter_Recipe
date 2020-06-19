@@ -155,7 +155,6 @@ class _RecipeDetailsState extends State<RecipeDetails>
                           style: new TextStyle(
                             fontFamily: 'FuturaPTMedium',
                             fontSize: 18,
-                            // color: UniversalVariables.primaryAlabaster,
                           ),
                         ),
                       ),
@@ -171,7 +170,6 @@ class _RecipeDetailsState extends State<RecipeDetails>
                           style: new TextStyle(
                             fontFamily: 'FuturaPTMedium',
                             fontSize: 18,
-                            // color: UniversalVariables.primaryAlabaster,
                           ),
                         ),
                       ),

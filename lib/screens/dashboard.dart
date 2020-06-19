@@ -167,7 +167,6 @@ class _DashboardState extends State<Dashboard> {
   Future<List<Data>> _fetchRecipe({BuildContext context}) async {
     try {
       var recipedetailsRequest = await http.get(
-          // Encode the url
           RECIPE_DETAILS_API_URL,
           headers: {
             'Content-Type': 'application/json',
@@ -187,8 +186,8 @@ class _DashboardState extends State<Dashboard> {
         CustomDialog.showScaleAlertBox(
           context: context,
           title: alertdialogTitle,
-          icon: Icons.info_outline, // IF YOU WANT TO ADD ICON
-          text: alertdialogDescription, // IF YOU WANT TO ADD
+          icon: Icons.info_outline,
+          text: alertdialogDescription,
           firstButton: alertdialogOkButton,
         );
       }
@@ -256,7 +255,7 @@ class _DashboardState extends State<Dashboard> {
                               offset: Offset(0, 4),
                               blurRadius: 8,
                               color: UniversalVariables
-                                  .primaryDodgerBlueShadow // Black color with 12% opacity
+                                  .primaryDodgerBlueShadow,
                               ),
                         ]),
                     child: Container(
@@ -290,7 +289,6 @@ class _DashboardState extends State<Dashboard> {
                     right: 0,
                     child: SizedBox(
                       height: height * 0.18,
-                      // our image take 200 width, thats why we set out total width - 200
                       width: width - (width * 0.58),
                       child: Column(
                         crossAxisAlignment: CrossAxisAlignment.end,
@@ -312,7 +310,6 @@ class _DashboardState extends State<Dashboard> {
                               ]),
                             ),
                           ),
-                          // it use the available space
                           Spacer(),
                           Container(
                             padding: EdgeInsets.symmetric(

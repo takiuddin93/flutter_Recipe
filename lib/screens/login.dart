@@ -226,9 +226,7 @@ class _LoginPageState extends State<Login> {
   _validateInputs() async {
     if (_email.text != '' && _password.text != '') {
       try {
-        var loginRequest = await http.post(
-            // Encode the url
-            LOGIN_API_URL,
+        var loginRequest = await http.post(LOGIN_API_URL,
             headers: {
               'Content-Type': 'application/json',
             },
@@ -241,13 +239,11 @@ class _LoginPageState extends State<Login> {
 
         if (data["response"].toString() == "success") {
           String token = data["result"]["token"].toString();
-          var userdetailsRequest = await http.get(
-              // Encode the url
-              USER_DETAILS_API_URL,
-              headers: {
-                'Content-Type': 'application/json',
-                HttpHeaders.authorizationHeader: "Bearer " + token,
-              });
+          var userdetailsRequest =
+              await http.get(USER_DETAILS_API_URL, headers: {
+            'Content-Type': 'application/json',
+            HttpHeaders.authorizationHeader: "Bearer " + token,
+          });
 
           Map<String, dynamic> userdetails =
               json.decode(userdetailsRequest.body);
@@ -276,7 +272,6 @@ class _LoginPageState extends State<Login> {
         throw e;
       }
     } else {
-      // validation error
       setState(() {
         _loginTapped = false;
         _loginSuccess = false;

@@ -46,7 +46,6 @@ class CustomDialog {
                 ),
                 actions: <Widget>[
                   MaterialButton(
-                    // OPTIONAL BUTTON
                     shape: RoundedRectangleBorder(
                       borderRadius: BorderRadius.circular(2.0),
                     ),
