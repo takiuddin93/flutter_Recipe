@@ -2,7 +2,7 @@
 
 A new Flutter Recipe App.
 
-Apk file in '/apk' folder
+Apk file in `/apk` folder
 
 ## Getting Started
 
