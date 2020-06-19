@@ -2,6 +2,7 @@ import 'dart:convert';
 import 'dart:io';
 
 import 'package:flutter/material.dart';
+import 'package:flutter_svg/flutter_svg.dart';
 import 'package:http/http.dart' as http;
 import 'package:recipe/constants/strings.dart';
 import 'package:recipe/screens/dashboard.dart';
@@ -56,6 +57,19 @@ class _LoginPageState extends State<Login> {
               ),
             ),
           ),
+          Positioned(
+            top: height * 0.32,
+            left: (width - (width * 0.16)) / 2,
+            child: Container(
+              width: width,
+              alignment: Alignment.centerLeft,
+              child: SvgPicture.asset(
+                'assets/svgs/recipe.svg',
+                semanticsLabel: 'Background',
+                width: width * 0.16,
+              ),
+            ),
+          ),
           // Email
           Positioned(
             width: media.width,
@@ -66,7 +80,7 @@ class _LoginPageState extends State<Login> {
               },
               child: Container(
                 padding: EdgeInsets.only(
-                  top: media.height * 0.40,
+                  top: media.height * 0.50,
                   left: media.width * 0.10,
                   right: media.width * 0.10,
                 ),
@@ -87,7 +101,7 @@ class _LoginPageState extends State<Login> {
               visible: _errorVisible,
               child: Container(
                 padding: EdgeInsets.only(
-                  top: media.height * 0.48,
+                  top: media.height * 0.58,
                   left: media.width * 0.10,
                   right: media.width * 0.10,
                 ),
@@ -121,7 +135,7 @@ class _LoginPageState extends State<Login> {
               },
               child: Container(
                 padding: EdgeInsets.only(
-                  top: media.height * 0.52,
+                  top: media.height * 0.62,
                   left: media.width * 0.10,
                   right: media.width * 0.10,
                 ),
@@ -142,7 +156,7 @@ class _LoginPageState extends State<Login> {
               visible: _errorVisible,
               child: Container(
                 padding: EdgeInsets.only(
-                  top: media.height * 0.60,
+                  top: media.height * 0.70,
                   left: media.width * 0.10,
                   right: media.width * 0.10,
                 ),
@@ -168,7 +182,7 @@ class _LoginPageState extends State<Login> {
           ),
           // Submit Button
           Positioned(
-              top: media.height * 0.7,
+              top: media.height * 0.74,
               left: media.width * 0.6,
               right: media.width * 0.10,
               child: GestureDetector(
