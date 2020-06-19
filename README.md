@@ -1,6 +1,8 @@
 # flutter_Recipe
 
-A new Flutter project.
+A new Flutter Recipe App.
+
+Apk file in '/apk' folder
 
 ## Getting Started
 
