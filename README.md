@@ -2,6 +2,8 @@
 
 A Flutter Recipe App.
 
+Screenshots in `/screenshots` folder
+
 Apk file in `/apk` folder
 
 ## Getting Started
