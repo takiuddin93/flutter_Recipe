@@ -294,7 +294,7 @@ class _DashboardState extends State<Dashboard> {
                           Spacer(),
                           Padding(
                             padding:
-                                EdgeInsets.symmetric(horizontal: width * 0.06),
+                                EdgeInsets.symmetric(horizontal: width * 0.01),
                             child: RichText(
                               text: TextSpan(children: <TextSpan>[
                                 TextSpan(
@@ -302,7 +302,7 @@ class _DashboardState extends State<Dashboard> {
                                   style: TextStyle(
                                       color:
                                           UniversalVariables.primaryDodgerBlue,
-                                      fontSize: 14.0,
+                                      fontSize: 16.0,
                                       fontFamily: 'FuturaPTBold'),
                                 ),
                               ]),
