@@ -21,7 +21,7 @@ class CustomLoginSignUpTextField extends StatelessWidget {
       this.media})
       : super(key: key);
 
-  var _keyboartType;
+  TextInputType _keyboartType;
   Widget _prefixiconData;
 
   @override

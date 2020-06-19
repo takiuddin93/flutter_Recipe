@@ -19,7 +19,6 @@ class CustomPosts extends StatelessWidget {
     Size media = MediaQuery.of(context).size;
     double width = media.width;
     double height = media.height;
-    print("Width: " + width.toString() + " " + "Height: " + height.toString());
     return Container(
         margin: EdgeInsets.symmetric(
           vertical: height * 0.01,
