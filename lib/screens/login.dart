@@ -216,7 +216,6 @@ class _LoginPageState extends State<Login> {
                     setState(() {
                       _loginTapped = true;
                     });
-                    print("Tapped");
                     _validateInputs();
                   })),
         ],
@@ -226,10 +225,7 @@ class _LoginPageState extends State<Login> {
 
   _validateInputs() async {
     if (_email.text != '' && _password.text != '') {
-      print(_email.text + "    " + _password.text);
       try {
-        print("tring");
-
         var loginRequest = await http.post(
             // Encode the url
             LOGIN_API_URL,
@@ -255,7 +251,6 @@ class _LoginPageState extends State<Login> {
 
           Map<String, dynamic> userdetails =
               json.decode(userdetailsRequest.body);
-          print("User Name " + userdetails["result"]["name"].toString());
           setState(() {
             _loginSuccess = true;
           });
@@ -272,14 +267,12 @@ class _LoginPageState extends State<Login> {
             _loginTapped = false;
             _loginSuccess = false;
           });
-          print(loginRequest.statusCode);
         }
       } catch (e) {
         setState(() {
           _loginTapped = false;
           _loginSuccess = false;
         });
-        print(e);
         throw e;
       }
     } else {

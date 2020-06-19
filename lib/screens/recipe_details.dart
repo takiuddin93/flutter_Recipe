@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:recipe/model/recipe.dart';
-import 'package:recipe/screens/product_image.dart';
+import 'package:recipe/widgets/product_image.dart';
 import 'package:recipe/utils/universal_variables.dart';
 import 'package:recipe/widgets/custom_appbar.dart';
 
@@ -25,7 +25,6 @@ class _RecipeDetailsState extends State<RecipeDetails>
 
   @override
   void initState() {
-// TODO: implement initState
     super.initState();
     _tabController = new TabController(length: 2, vsync: this);
   }
