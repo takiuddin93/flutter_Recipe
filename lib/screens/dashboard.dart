@@ -173,8 +173,6 @@ class _DashboardState extends State<Dashboard> {
             'Content-Type': 'application/json',
             HttpHeaders.authorizationHeader: "Bearer " + token,
           });
-
-      print(recipedetailsRequest.statusCode);
       if (recipedetailsRequest.statusCode == 200) {
         Map<String, dynamic> recipedetails =
             json.decode(recipedetailsRequest.body);
@@ -195,7 +193,7 @@ class _DashboardState extends State<Dashboard> {
         );
       }
     } catch (e) {
-      print(e);
+      throw e;
     }
 
     return recipe;
