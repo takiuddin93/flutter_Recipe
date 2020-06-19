@@ -166,12 +166,11 @@ class _DashboardState extends State<Dashboard> {
 
   Future<List<Data>> _fetchRecipe({BuildContext context}) async {
     try {
-      var recipedetailsRequest = await http.get(
-          RECIPE_DETAILS_API_URL,
-          headers: {
-            'Content-Type': 'application/json',
-            HttpHeaders.authorizationHeader: "Bearer " + token,
-          });
+      var recipedetailsRequest =
+          await http.get(RECIPE_DETAILS_API_URL, headers: {
+        'Content-Type': 'application/json',
+        HttpHeaders.authorizationHeader: "Bearer " + token,
+      });
       if (recipedetailsRequest.statusCode == 200) {
         Map<String, dynamic> recipedetails =
             json.decode(recipedetailsRequest.body);
@@ -252,11 +251,10 @@ class _DashboardState extends State<Dashboard> {
                             : UniversalVariables.primaryGhost,
                         boxShadow: [
                           BoxShadow(
-                              offset: Offset(0, 4),
-                              blurRadius: 8,
-                              color: UniversalVariables
-                                  .primaryDodgerBlueShadow,
-                              ),
+                            offset: Offset(0, 4),
+                            blurRadius: 8,
+                            color: UniversalVariables.primaryDodgerBlueShadow,
+                          ),
                         ]),
                     child: Container(
                       margin: EdgeInsets.only(right: width * 0.02),
@@ -313,7 +311,7 @@ class _DashboardState extends State<Dashboard> {
                           Spacer(),
                           Container(
                             padding: EdgeInsets.symmetric(
-                              horizontal: width * 0.06 * 1.5,
+                              horizontal: width * 0.04 * 1.5,
                               vertical: width * 0.06 / 4,
                             ),
                             decoration: BoxDecoration(
@@ -326,11 +324,12 @@ class _DashboardState extends State<Dashboard> {
                             child: RichText(
                               text: TextSpan(children: <TextSpan>[
                                 TextSpan(
-                                  text: data[position].servings.toString(),
+                                  text: data[position].servings.toString() +
+                                      " Servings",
                                   style: TextStyle(
                                       color:
                                           UniversalVariables.primaryDodgerBlue,
-                                      fontSize: 12.0,
+                                      fontSize: 14.0,
                                       fontFamily: 'FuturaPTBold'),
                                 ),
                               ]),
