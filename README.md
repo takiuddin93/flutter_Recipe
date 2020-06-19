@@ -1,6 +1,6 @@
 # flutter_Recipe
 
-A new Flutter Recipe App.
+A Flutter Recipe App.
 
 Apk file in `/apk` folder
 
